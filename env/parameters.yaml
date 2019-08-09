@@ -1,0 +1,9 @@
+adminUser:
+  password: local:coops-test/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  token: local:coops-test/pipelineUser:token
+  username: cagiti-bot
+prow:
+  hmacToken: local:coops-test/prow:hmacToken

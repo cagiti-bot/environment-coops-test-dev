@@ -1,17 +1,22 @@
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  project: ""
+  clusterName: coops-test
+  environmentGitOwner: cagiti-org
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: jx-development
   provider: gke
-  zone: ""
-gitops: false
+  zone: europe-west1-b
 environments:
 - key: dev
 - key: staging
 - key: production
+gitops: true
 ingress:
-  domain: ""
+  domain: 35.241.186.134.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
@@ -28,4 +33,7 @@ storage:
   repository:
     enabled: false
     url: ""
+versionStream:
+  ref: v1.0.3
+  url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow
